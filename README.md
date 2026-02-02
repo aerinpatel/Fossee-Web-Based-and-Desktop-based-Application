@@ -1,4 +1,4 @@
-# ChemViz Pro: Industrial Telemetry Analytics Suite
+# FlowDrishti Pro: Industrial Telemetry Analytics Suite
 ### Intern Screening Task – Hybrid Web + Desktop Application
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
@@ -7,7 +7,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.0+-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![PyQt5](https://img.shields.io/badge/PyQt5-5.15+-41CD52?style=flat&logo=qt&logoColor=white)](https://www.riverbankcomputing.com/software/pyqt/)
 
-ChemViz Pro is a sophisticated full-stack industrial analytics platform designed for real-time monitoring, visualization, and health assessment of chemical plant equipment. It provides a seamless bridge between raw telemetry data and actionable executive insights through its premium web and desktop interfaces.
+FlowDrishti Pro is a sophisticated full-stack industrial analytics platform designed for real-time monitoring, visualization, and health assessment of chemical plant equipment. It provides a seamless bridge between raw telemetry data and actionable executive insights through its premium web and desktop interfaces.
 
 Developed by **Aerin Patel** for the Intern Screening Task.
 

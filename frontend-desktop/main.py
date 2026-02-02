@@ -16,7 +16,7 @@ API_URL = "http://localhost:8000/api/"
 # Premium Color Palette
 class Theme:
     """
-    Centralized design tokens for the ChemViz Pro desktop application.
+    Centralized design tokens for the FlowDrishti Pro desktop application.
     Follows a Slate/Indigo aesthetic for a premium industrial feel.
     """
     PRIMARY = "#4f46e5"      # Indigo 600
@@ -182,7 +182,7 @@ class GlassCard(QFrame):
 class LogoWidget(QWidget):
     """
     Custom-drawn SVG-like logo using QPainter.
-    Represents the ChemViz brand with a chemical flask icon inside a gradient glow.
+    Represents the FlowDrishti brand with a chemical flask icon inside a gradient glow.
     """
     def __init__(self, size=80, parent=None):
         super().__init__(parent)
@@ -235,7 +235,7 @@ class LoginDialog(QWidget):
     """
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("ChemViz - Login")
+        self.setWindowTitle("FlowDrishti - Login")
         self.setFixedSize(450, 650)
         self.setStyleSheet(STYLESHEET)
         
@@ -250,7 +250,7 @@ class LoginDialog(QWidget):
         layout.addSpacing(20)
         
         # Title
-        title = QLabel("ChemViz")
+        title = QLabel("FlowDrishti")
         title.setStyleSheet("font-size: 36px; font-weight: 800; color: #1e293b; letter-spacing: -1.5px;")
         title.setAlignment(Qt.AlignCenter)
         layout.addWidget(title)
@@ -298,7 +298,7 @@ class LoginDialog(QWidget):
 
 class WorkerWindow(QMainWindow):
     """
-    Main Dashboard terminal for ChemViz Pro.
+    Main Dashboard terminal for FlowDrishti Pro.
     
     Features:
     - Multi-tab navigation (Overview vs Analytics).
@@ -310,7 +310,7 @@ class WorkerWindow(QMainWindow):
         super().__init__()
         self.auth = auth
         self.current_dataset_id = None
-        self.setWindowTitle("ChemViz - Dashboard")
+        self.setWindowTitle("FlowDrishti - Dashboard")
         self.setMinimumSize(1200, 800)
         self.setStyleSheet(STYLESHEET)
         
@@ -331,7 +331,7 @@ class WorkerWindow(QMainWindow):
         brand_layout = QHBoxLayout()
         mini_logo = LogoWidget(45)
         brand_layout.addWidget(mini_logo)
-        title = QLabel("ChemViz")
+        title = QLabel("FlowDrishti")
         title.setStyleSheet("font-size: 22px; font-weight: 700; color: #1e293b;")
         brand_layout.addWidget(title)
         header_layout.addLayout(brand_layout)
@@ -567,7 +567,7 @@ class WorkerWindow(QMainWindow):
         try:
             response = requests.get(f"{API_URL}reports/{target_id}/pdf/", auth=self.auth)
             if response.status_code == 200:
-                path, _ = QFileDialog.getSaveFileName(self, "Save Analysis Report", f"ChemViz_Report_{target_id}.pdf", "PDF (*.pdf)")
+                path, _ = QFileDialog.getSaveFileName(self, "Save Analysis Report", f"FlowDrishti_Report_{target_id}.pdf", "PDF (*.pdf)")
                 if path:
                     with open(path, 'wb') as f: f.write(response.content)
                     QMessageBox.information(self, "Saved", "Detailed report saved to your computer.")

@@ -72,7 +72,7 @@ def generate_pdf(dataset):
         dist_data = getattr(dataset, 'equipment_type_distribution', {}) or {}
         
         # Title & Info
-        elements.append(Paragraph(f"CHEMVIZ PRO ANALYTICS", title_style))
+        elements.append(Paragraph(f"FLOWDRISHTI PRO ANALYTICS", title_style))
         elements.append(Paragraph(f"Industrial Telemetry Report • Dataset: {name} • Generated: {date_str}", subtitle_style))
         elements.append(Spacer(1, 10))
 

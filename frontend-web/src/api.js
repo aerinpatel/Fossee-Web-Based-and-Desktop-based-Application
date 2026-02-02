@@ -9,7 +9,7 @@ const api = axios.create({
 });
 
 // Initialize token from localStorage if it exists
-const storedToken = localStorage.getItem('chemviz_token');
+const storedToken = localStorage.getItem('flowdrishti_token');
 if (storedToken) {
     api.defaults.headers.common['Authorization'] = `Token ${storedToken}`;
 }
@@ -20,10 +20,10 @@ if (storedToken) {
  */
 export const setAuthToken = (token) => {
     if (token) {
-        localStorage.setItem('chemviz_token', token);
+        localStorage.setItem('flowdrishti_token', token);
         api.defaults.headers.common['Authorization'] = `Token ${token}`;
     } else {
-        localStorage.removeItem('chemviz_token');
+        localStorage.removeItem('flowdrishti_token');
         delete api.defaults.headers.common['Authorization'];
     }
 };

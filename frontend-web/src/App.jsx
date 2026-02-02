@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BeakerIcon } from '@heroicons/react/24/outline';
 
 /**
- * Root Application component for ChemViz Pro.
+ * Root Application component for FlowDrishti Pro.
  * 
  * Manages:
  * - Authentication state and session persistence via localStorage.
@@ -24,8 +24,8 @@ function App() {
 
     // Persistence: Restore session on mount
     useEffect(() => {
-        const savedUser = localStorage.getItem('chemviz_user');
-        const savedToken = localStorage.getItem('chemviz_token');
+        const savedUser = localStorage.getItem('flowdrishti_user');
+        const savedToken = localStorage.getItem('flowdrishti_token');
         if (savedUser && savedToken) {
             setUser(savedUser);
             // api.js handles setting the default header on import if token exists in localStorage
@@ -44,7 +44,7 @@ function App() {
 
             setAuthToken(token); // Set token header and save to localStorage
             setUser(user.username);
-            localStorage.setItem('chemviz_user', user.username);
+            localStorage.setItem('flowdrishti_user', user.username);
             setActiveTab('dashboard');
         } catch (err) {
             console.error("Login failed", err);
@@ -63,7 +63,7 @@ function App() {
         setUser(null);
         setCurrentUpload(null);
         setAuthToken(null); // Clears header and localStorage
-        localStorage.removeItem('chemviz_user');
+        localStorage.removeItem('flowdrishti_user');
         setActiveTab('dashboard');
     };
 
@@ -117,7 +117,7 @@ function App() {
                             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-xl shadow-blue-500/20">
                                 <BeakerIcon className="w-7 h-7 text-white" />
                             </div>
-                            <span className="text-2xl font-bold tracking-tight text-slate-900">ChemViz Pro</span>
+                            <span className="text-2xl font-bold tracking-tight text-slate-900">FlowDrishti Pro</span>
                         </motion.div>
 
                         <motion.div
@@ -178,7 +178,7 @@ function App() {
                         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-md shadow-blue-500/20">
                             <BeakerIcon className="w-5 h-5 text-white" />
                         </div>
-                        <span className="font-bold text-lg tracking-tight text-slate-900">ChemViz <span className="text-blue-600 font-light">Pro</span></span>
+                        <span className="font-bold text-lg tracking-tight text-slate-900">FlowDrishti <span className="text-blue-600 font-light">Pro</span></span>
                     </div>
                     <div className="flex items-center space-x-6">
                         <div className="text-sm text-slate-500">
